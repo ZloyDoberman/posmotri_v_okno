@@ -66,13 +66,15 @@ ol {
   position: relative;
   display: flex;
   flex-direction: column;
-  max-height: 298px;
-  overflow: auto;
+  height: 298px; /*1-й способ*/
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .content__details {
   width: 100%;
-  height: 534px;
+  height: 100%;
+  /*min-height:534px*/ /*2-й способ*/
 }
 
 .result {
@@ -101,6 +103,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
 }
 
 .content__video-card-title {
@@ -128,12 +131,12 @@ ol {
 }
 
 .title {
+  margin-bottom: 26px;
   font-family: Oswald, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
   text-transform: uppercase;
-  margin-bottom: 26px;
 }
 
 .content__accent {
@@ -147,7 +150,7 @@ ol {
 }
 
 .content__card-link:focus {
-  outline: none;
+  outline: none; /* сбрасывает обводку в .content__card-link_current*/
 }
 
 .content__card-link:focus-visible {
@@ -160,12 +163,17 @@ ol {
   text-decoration: underline;
 }
 
+.content__card-link_current {
+  background-color:#545050;
+  /*outline: 2px solid #545050;*/
+}
+
 .content__card-link:active {
   outline: 2px solid #545050;
   text-decoration: none;
   background-color:#545050;
-
 }
+
 .content__video-card-description {
   max-width: 200px; 
   overflow: hidden;
@@ -288,9 +296,9 @@ ol {
 }
 
 .more-button {
-  width: 100%;
+  width: 399px;
 }
 
 .more-button:focus-visible {
-  margin: 2px;
+  margin: 4px;
 }
