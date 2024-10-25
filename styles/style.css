@@ -68,7 +68,6 @@ ol {
   flex-direction: column;
   height: 298px; /*1-й способ*/
   overflow-y: auto;
-  overflow-x: hidden;
 }
 
 .content__details {
